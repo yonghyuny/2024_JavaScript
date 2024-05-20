@@ -35,8 +35,8 @@
 // replaceAll(a,b)  -> 모든 a를 b로 바꿔줌
 // const a = "hello".replaceAll("l", "z");
 
-//slice(a,b) a부터 b-1까지 문자 짜르기
-//
+// slice(a,b) a부터 b-1까지 문자 자르기
+// split("a") a가 있는부분 자르기
 
 const option = ["100 blue", "200 green", "500 black", "400 red"];
 // w 100 h 100 bg blue w200h200 bg green
@@ -59,6 +59,8 @@ const option = ["100 blue", "200 green", "500 black", "400 red"];
 // box2.style.backgroundColor = y[1];
 
 // document.body.appendChild(box2);
+
+// -------------------------------------
 
 // option.forEach((x) => {
 // const a = x.split(" ");
