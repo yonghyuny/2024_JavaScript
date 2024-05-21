@@ -1,0 +1,35 @@
+.box {
+  border: 1px solid black;
+}
+
+.medium {
+  width: 100px;
+  height: 100px;
+}
+
+.large {
+  width: 200px;
+  height: 200px;
+}
+
+.radius {
+  border-radius: 20px;
+}
+
+.deg_90 {
+  border: 0px;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.box1 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}

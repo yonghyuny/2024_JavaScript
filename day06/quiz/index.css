@@ -1,0 +1,49 @@
+.borderRadiusZero1 {
+  border-radius: 0px;
+}
+
+.borderRadiusTen1 {
+  border-radius: 10px;
+}
+
+.borderRadiusTwenty1 {
+  border-radius: 20px;
+}
+
+.red1 {
+  background-color: red;
+}
+.orange1 {
+  background-color: orange;
+}
+.yellow1 {
+  background-color: yellow;
+}
+.green1 {
+  background-color: green;
+}
+.blue1 {
+  background-color: blue;
+}
+
+.xsmall1 {
+  width: 100px;
+  height: 100px;
+}
+
+.small1 {
+  width: 100px;
+  height: 100px;
+}
+.medium1 {
+  width: 100px;
+  height: 100px;
+}
+.large1 {
+  width: 100px;
+  height: 100px;
+}
+.xlarge1 {
+  width: 100px;
+  height: 100px;
+}
