@@ -1,0 +1,20 @@
+.black {
+  background-color: black;
+  color: white;
+}
+
+.none {
+  display: none;
+}
+
+.passwordBox {
+  display: flex;
+}
+
+.confirmBox {
+  display: flex;
+}
+
+.red {
+  color: red;
+}
