@@ -22,21 +22,24 @@ const signUpBox = [
   },
 ];
 
-signUpBox.forEach((v, i) => {
+signUpBox.forEach((v) => {
   const input = document.createElement("input");
   input.type = v.type;
   input.placeholder = v.placeholder;
   input.classList.add(v.className);
 
-  const domain = ["@naver", "@daum", "@kakao", "@gmail"];
-
   input.addEventListener("input", (e) => {
+    const domain = ["@naver", "@daum", "@kakao", "@gmail"];
+    let inputMatched = false;
+
     domain.forEach((v) => {
-      String(e.target.value).includes(v)
-        ? input.classList.add("red")
-        : input.classList.remove("red");
+      e.target.value.includes(v) ? (inputMatched = true) : inputMatched;
     });
+    inputMatched ? input.classList.add("red") : input.classList.remove("red");
+
+    const login = document.querySelector(".login");
   });
+
   document.body.appendChild(input);
 });
 // email.addEventListener("input", (e) => {
