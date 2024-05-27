@@ -1489,19 +1489,18 @@ const data = [
   },
 ];
 
-const card = document.querySelector(".card");
-const info = document.querySelector(".info");
-const makeNameCard = (data) => {
-  return `${info.innerHTML}
-  
-  <img src = "${data.avatarImg}"/>
-    <h5>${data.fullName}</h5>
-  <h5>${data.id}</h5>
-  <span>${data.job}</span>
-  <span>${data.language}</span>
-  `;
-};
+const cards = document.querySelector(".cards");
+const makeNameCard = (data) =>
+  `<div class = "card">
+      
+        <img src = "${data.avatarImg}"/>
+        
+        <div class = "info">
+           <h3>FullName: ${data.fullName}</h3>
+           <h4>Id: ${data.id}</h4>
+           <span>Job: ${data.job}</span>
+           <span>Language: ${data.language}</span>
+         </div>
+    </div>`;
 
-data.forEach((v) => {
-  card.insertAdjacentHTML("beforeend", makeNameCard(v));
-});
+data.forEach((v) => cards.insertAdjacentHTML("beforeend", makeNameCard(v)));
