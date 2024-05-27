@@ -1,8 +1,3 @@
-a {
-  display: flex;
-  flex-direction: column;
-}
-.info {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
+.info > img {
+  display: inline-block;
 }
