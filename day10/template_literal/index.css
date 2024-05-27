@@ -1,0 +1,25 @@
+.background {
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+}
+
+.box {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+h1 {
+  color: #cd84f1;
+}
+
+h4 {
+  color: #7d5fff;
+}
+
+span {
+  color: grey;
+}
+
+line {
+  border: 1px solid black;
+}
