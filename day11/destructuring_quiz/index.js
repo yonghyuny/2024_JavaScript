@@ -35,45 +35,71 @@ backendData;
 
 // 3. ipaddress가 맨마지막 세자리가 합이 10이하이면, id,color만 콘솔로
 
-const c = backendData
-  .filter(({ ipAddress }) => {
-    const ipArr = [...ipAddress];
-    const lastDotIndex = ipArr.findLastIndex((v) => v === ".");
-    const spliceArr = ipArr
-      .splice(lastDotIndex + 1, ipArr.length)
-      .map((v) => parseInt(v));
-    const sum = spliceArr.reduce((a, c) => a + c);
-    return sum <= 10;
-  })
-  .map(({ ipAddress, id, color }) => ({ ipAddress, id, color }));
+// const c = backendData
+//   .filter(({ ipAddress }) => {
+//     const ipArr = [...ipAddress];
+//     const lastDotIndex = ipArr.findLastIndex((v) => v === ".");
+//     const spliceArr = ipArr
+//       .splice(lastDotIndex + 1, ipArr.length)
+//       .map((v) => parseInt(v));
+//     const sum = spliceArr.reduce((a, c) => a + c);
+//     return sum <= 10;
+//   })
+//   .map(({ ipAddress, id, color }) => ({ ipAddress, id, color }));
 
-console.log(c);
+// console.log(c);
 
 // -----------------------------------------------------------
 
 // 4. timezone이 알파벳 모음으로 시작하면, {timezone, carmake, phone앞 세자리만 가져오기}
+// const check = ["A", "E", "I", "O", "U"];
 
-// const a = backendData.filter(({ timeZone }) => {
+// const d = backendData
+//   .filter(({ timeZone }) => check.includes(timeZone.split("/")[1][0]))
+//   // timeZone.split("/")[1][0].includes(check)
+//   .map(({ timeZone, carMake, phone }) => ({
+//     timeZone,
+//     carMake,
+//     phone: phone.split("-")[0],
+//   }));
 
-// });
-// const a = backendData.map(({ timeZone }) => {
-//   return timeZone;
-// });
-
-// console.log(a);
-
-// const d = backendData.filter(({ timeZone }) => {
-//   const tzArr = [...timeZone];
-//   const check = ["A", "E", "I", "O", "U"];
-
-// });
+// const d = backendData
+//   .filter(({ timeZone }) =>
+//     check.some((vowel) => timeZone.split("/")[1][0].includes(vowel))
+//   )
+//   .map(({ timeZone, carMake, phone }) => ({
+//     timeZone,
+//     carMake,
+//     phone: phone.split("-")[0],
+//   }));
 
 // console.log(d);
-// backendData.timeZone, backendData.carMake, backendData.phone;
-// if ((backendData.timeZone[0] = "A" || "E" || "I" || "O" || "U")) {
-//   backendData.timeZone, backendData.carMake, backendData.phone;
-// }
+
+// const check = ["A", "E", "I", "O", "U"];
+// const a = backendData.filter(({ timeZone }) => timeZone.split("/")[1].includes(check)
+// .map(({ timeZone, carMake, phone })
+// });
 
 // --------------------------------------------------------------
 
 // 5. money가 50000엔 이하이면, phone[하이픈 제거], appName은 대문자화 하고 가져오기
+
+// const e = backendData.filter(({ money }) => money.slice(0));
+
+// const e = backendData.map(({ money }) => parseInt(money));
+
+// console.log(e);
+
+const e = backendData
+  .filter(({ money }) => {
+    const removeCurrency = money.substring(1);
+
+    return parseInt(removeCurrency) <= 50000;
+  })
+  .map(({ phone, appName, id }) => ({
+    phone: phone.replaceAll("-", ""),
+    appName: appName.toUpperCase(),
+    id,
+  }));
+
+console.log(e);
