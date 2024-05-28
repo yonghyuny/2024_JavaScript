@@ -1496,7 +1496,7 @@ const makeNameCard = (data) =>
         <img src = "${data.avatarImg}"/>
         
         <div class = "info">
-           <h3>FullName: ${data.fullName}</h3>
+           <h3>FullName:<br> ${data.fullName}</h3>
            <h4>Id: ${data.id}</h4>
            <span>Job: ${data.job}</span>
            <span>Language: ${data.language}</span>
