@@ -23,6 +23,7 @@ data.forEach((v) => {
         />
       </div>
       <div class="info">
+      <div class =>
         ${category(v.tags)}
         ${gymName(v.gymName)}
         <div class="rateLocation">
