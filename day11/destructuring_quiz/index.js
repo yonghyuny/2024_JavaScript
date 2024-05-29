@@ -56,7 +56,6 @@ backendData;
 
 // const d = backendData
 //   .filter(({ timeZone }) => check.includes(timeZone.split("/")[1][0]))
-//   // timeZone.split("/")[1][0].includes(check)
 //   .map(({ timeZone, carMake, phone }) => ({
 //     timeZone,
 //     carMake,
@@ -75,10 +74,7 @@ backendData;
 
 // console.log(d);
 
-// const check = ["A", "E", "I", "O", "U"];
-// const a = backendData.filter(({ timeZone }) => timeZone.split("/")[1].includes(check)
-// .map(({ timeZone, carMake, phone })
-// });
+// console.log(d);
 
 // --------------------------------------------------------------
 
@@ -90,16 +86,26 @@ backendData;
 
 // console.log(e);
 
-const e = backendData
-  .filter(({ money }) => {
-    const removeCurrency = money.substring(1);
+// const e = backendData
+//   .filter(({ money }) => {
+//     const removeCurrency = money.substring(1);
 
-    return parseInt(removeCurrency) <= 50000;
-  })
-  .map(({ phone, appName, id }) => ({
+//     return parseInt(removeCurrency) <= 50000;
+//   })
+//   .map(({ phone, appName, id }) => ({
+//     phone: phone.replaceAll("-", ""),
+//     appName: appName.toUpperCase(),
+//     id,
+//   }));
+
+// console.log(e);
+
+const e = backendData
+  .filter(({ money }) => money <= 50000)
+  .map(({ money, phone, appName }) => ({
+    money,
     phone: phone.replaceAll("-", ""),
     appName: appName.toUpperCase(),
-    id,
   }));
 
 console.log(e);
