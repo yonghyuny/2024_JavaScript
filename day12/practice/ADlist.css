@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   width: 95%;
-  height: 330px;
+
   margin: 20px;
   background-color: white;
   border-radius: 10px;
@@ -31,12 +31,12 @@
   display: flex;
   gap: 15px;
 }
-.imgBox {
+.imgBigBox {
   width: 360px;
   height: 220px;
 }
 
-.imgBox > img {
+.imgBigBox > img {
   width: 100%;
   height: 100%;
   border-top-left-radius: 10px;
@@ -85,6 +85,21 @@
   color: rgb(255, 197, 0);
   display: flex;
   gap: 5px;
+}
+
+.info__top__reservation {
+  font-size: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: "TTHakgyoansimUndongjangL";
+}
+
+.info__top__reservation > i {
+  padding: 7px;
+  color: rgb(84, 103, 245);
+  border-radius: 50%;
+  background-color: rgb(234, 238, 255);
 }
 
 .info__top-icon {
@@ -166,8 +181,9 @@
   border-radius: 10px;
 }
 .freeProgram {
-  padding: 10px 10px 0 10px;
+  padding: 10px 10px 10px 10px;
   display: flex;
+  align-items: center;
 }
 
 .free__title {
@@ -179,8 +195,9 @@
 }
 
 .freeService {
+  align-items: center;
   display: flex;
-  padding: 0 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
 }
 .free__info {
   font-size: 13px;

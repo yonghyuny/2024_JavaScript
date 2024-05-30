@@ -1,0 +1,22 @@
+body {
+  width: 100vw;
+}
+.cards {
+  width: 100%;
+  max-width: 786px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 10px;
+}
+
+.card {
+  border: 1px solid black;
+}
+
+.imgBox {
+  width: 100%;
+}
+.imgBox > img {
+  width: 100%;
+}
