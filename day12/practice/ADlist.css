@@ -9,12 +9,8 @@
   margin: 0 auto;
   background-color: rgb(227, 229, 236);
 }
-
-.list {
-  padding: 5px;
-  max-width: 786px;
-  margin: 0 auto;
-  background-color: rgb(227, 229, 236);
+.ADList:hover {
+  cursor: pointer;
 }
 
 .AD1 {

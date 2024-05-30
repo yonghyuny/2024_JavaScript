@@ -28,18 +28,43 @@ const reservation = (reservation) =>
     : "";
 
 const daily = (hasDailyItem) =>
-  `<div class="daily">${hasDailyItem == true ? "일일권" : ""}</div>`;
+  hasDailyItem === true ? `<div class = "daily">일일권</div>` : "";
+
 const memberPrice = (memberPrice) =>
-  `<div class="memberPrice">${memberPrice == true ? "다짐회원가" : ""}</div>`;
+  memberPrice === true ? `<div class = "memberPrice">다짐회원가</div>` : "";
+
+const isCheckperiod = (period) => (period !== null ? period : 1);
 
 const discountPrice = (
-  discount
-) => `<span class="discountPrice">${discount}~</span
+  discount,
+  period
+) => `<span class="discountPrice">${Math.round(
+  discount / isCheckperiod(period),
+  2
+)}~</span
 ><span class="text">/월</span>`;
 
-const regularPrice = (regularPrice) =>
-  `<span class="regularPrice">${regularPrice}원</span>`;
+// ${discountPrice(
+//   Math.round(v.price.lowestPrice / v.price.period),
+//   2
+// )}
 
+const regularPrice = (isLowestPrice, regularPrice, period) =>
+  isLowestPrice === true
+    ? `<span class = "regularPrice">${Math.round(
+        regularPrice / isCheckperiod(period),
+        2
+      )}원</span>`
+    : "";
+
+// `<span class="regularPrice">${regularPrice}원</span>`;
+
+const calDiscountRate = (x, y) => parseInt(((x - y) / x) * 100);
+
+const discountRate = (discountRate, x, y) =>
+  discountRate === true
+    ? `<span class = "discountrate">${calDiscountRate(x, y)}%</span>`
+    : "";
 // -------------------------------------------------------------------------
 
 const freeProgram = (freeProgram) =>
@@ -50,8 +75,6 @@ const freeProgram = (freeProgram) =>
 </div>`
     : ``;
 
-// -------------------------------------------------------------------------
-
 const freeService = (freeService) =>
   freeService !== ""
     ? `<div class="freeService">
@@ -60,7 +83,6 @@ const freeService = (freeService) =>
 </div>`
     : "";
 
-// ================================================================
 // 데이터 대입
 const ADList = document.querySelector(".ADList");
 datas[0].liteAdList.forEach((v) => {
@@ -94,16 +116,16 @@ datas[0].liteAdList.forEach((v) => {
                   ${memberPrice(v.isLowestPrice)}
                 </div>
                 <div class="info__bottom-priceInfo">
-                  <span class="discountrate">${parseInt(
-                    ((v.price.originalPrice - v.price.lowestPrice) /
-                      v.price.originalPrice) *
-                      100
-                  )}%</span>
-                  ${discountPrice(v.price.lowestPrice / v.price.period)}
+                  ${discountRate(
+                    v.price.isLowestPrice,
+                    v.price.originalPrice,
+                    v.price.lowestPrice
+                  )}
+                  ${discountPrice(v.price.lowestPrice, v.price.period)}
                   ${regularPrice(
-                    v.price.originalPrice !== v.price.lowestPrice
-                      ? v.price.originalPrice / v.price.period
-                      : ""
+                    v.price.isLowestPrice,
+                    v.price.originalPrice,
+                    v.price.period
                   )}
                 </div>
               </div>
@@ -152,18 +174,16 @@ datas[0].centerList.forEach((v) => {
                   ${memberPrice(v.isLowestPrice)}
                 </div>
                 <div class="info__bottom-priceInfo">
-                  <span class="discountrate">${parseInt(
-                    ((v.price.originalPrice - v.price.lowestPrice) /
-                      v.price.originalPrice) *
-                      100
-                  )}%</span>
-                  ${discountPrice(
-                    Math.round(v.price.lowestPrice / v.price.period, 2)
-                  )}
+                ${discountRate(
+                  v.price.isLowestPrice,
+                  v.price.originalPrice,
+                  v.price.lowestPrice
+                )}
+                ${discountPrice(v.price.lowestPrice, v.price.period)}
                   ${regularPrice(
-                    v.price.originalPrice !== v.price.lowestPrice
-                      ? v.price.originalPrice / v.price.period
-                      : ""
+                    v.price.isLowestPrice,
+                    v.price.originalPrice,
+                    v.price.period
                   )}
                 </div>
               </div>
@@ -176,6 +196,7 @@ datas[0].centerList.forEach((v) => {
           ${freeService(v.service.free)}
           </div>
         </div>
+        <hr>
    `
   );
 });
