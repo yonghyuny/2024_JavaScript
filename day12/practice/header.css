@@ -7,14 +7,17 @@
 }
 .header {
   width: 100vw;
+  height: 50px;
+  background-color: white;
+  z-index: 3;
 }
 
 .nav {
+  position: relative;
   max-width: 786px;
   height: 50px;
   margin: 0 auto;
   /* border: 1px solid black; */
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,8 +27,13 @@
   font-size: 20px;
   font-weight: 700;
 }
-.header_icon {
+.header_icons {
+  display: flex;
   position: absolute;
-  top: 15px;
   right: 10px;
+  gap: 10px;
+}
+
+.header_icons:hover {
+  cursor: pointer;
 }
