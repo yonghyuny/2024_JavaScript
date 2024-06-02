@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "TTHakgyoansimUndongjangL";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimUndongjangL.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+.header {
+  width: 100vw;
+  height: 50px;
+  background-color: white;
+  z-index: 3;
+}
+
+.nav {
+  position: relative;
+  max-width: 786px;
+  height: 50px;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  font-family: "TTHakgyoansimUndongjangL";
+  font-size: 20px;
+  font-weight: 700;
+}
+.header_icons {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  gap: 10px;
+}
+
+.header_icons:hover {
+  cursor: pointer;
+}
