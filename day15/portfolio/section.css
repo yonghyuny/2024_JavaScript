@@ -40,12 +40,6 @@
   align-items: center;
 }
 
-.plan__text {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .plan__title {
   font-size: 30px;
 }
