@@ -29,8 +29,4 @@ const engMonth = {
 
 const todayInner = document.querySelector(".header__left-today");
 
-todayInner.insertAdjacentText(
-  "beforeend",
-  `${engMonth[today.getMonth()]}. ${date}. ${year}`
-);
-// todayInner.insertAdjacentText("beforeend", `${hour}, ${min}, ${sec}`);
+todayInner.innerText = `${engMonth[today.getMonth()]}. ${date}. ${year}`;

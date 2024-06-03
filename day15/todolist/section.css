@@ -1,0 +1,52 @@
+.main {
+  width: 100%;
+  max-width: 600px;
+
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list {
+  display: flex;
+  border-bottom: 1px solid gray;
+  align-items: center;
+}
+
+.listIcon {
+  padding: 20px;
+  opacity: 0.5;
+}
+
+.listIcon > i {
+  font-size: 30px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
+.plan {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan__title {
+  font-size: 30px;
+}
+
+.plan__sub {
+  color: gray;
+}
+.plan__time {
+  color: gray;
+}
