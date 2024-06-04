@@ -4,65 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="section.css" />
-    <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="addPage.css" />
-    <script src="date.js" defer></script>
-    <script src="event.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
+    <script type="module" src="main.js" defer></script>
   </head>
   <body>
+    <div class="title">TO DO LIST</div>
     <header class="header">
-      <div class="backImg">
-        <div class="header__nav">
-          <div class="header__left">
-            <div class="resetIcon">
-              <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="header__left-text"><span>Hello</span></div>
-            <div class="header__left-today"></div>
-          </div>
-          <div class="header__right">
-            <span class="weather">24'c</span>
-            <span class="area">Incheon</span>
-          </div>
+      <div class="today">
+        <div class="date"></div>
+        <div class="mon_year">
+          <div class="month"></div>
+          <div class="year"></div>
         </div>
       </div>
+      <div class="todayTime"></div>
+      <div class="day"></div>
     </header>
     <section class="main">
-      <div class="lists"></div>
+      <ul class="lists">
+        할일목록
+      </ul>
     </section>
-    <section class="footer">
-      <div class="addBtn"><i class="fa-solid fa-plus"></i></div>
+    <section class="add">
+      <button class="addBtn">추가</button>
     </section>
-
-    <!-- <section class="addPage">
-      <div class="addPage__header">
-        <div class="addPage__nav">
-          <div class="backIcon">
-            <i class="fa-solid fa-arrow-left"></i>
-          </div>
-          <div class="addPage__title">Add new thing</div>
-          <div class="filterIcon">
-            <i class="fa-solid fa-filter"></i>
-          </div>
-        </div>
-      </div>
-      <div class="addPage__main">
-        <input type="text" class="category" placeholder="Category" />
-        <input type="text" class="todo" placeholder="To-do" />
-        <input type="text" class="place" placeholder="Place" />
-        <input type="text" class="time" placeholder="Time" />
-        <input type="text" class="Memo" placeholder="Notification" />
-        <button class="addPage__addBtn">ADD YOUR THING</button>
-      </div>
-    </section> -->
   </body>
 </html>

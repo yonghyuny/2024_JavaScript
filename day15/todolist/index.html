@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="section.css" />
-    <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="addPage.css" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
-    <main id="main"></main>
-    <footer id="footer"></footer>
-    <div class="addBtn"><i class="fa-solid fa-plus"></i></div>
-
-    <script type="module" src="./main.js"></script>
+    <div class="container">
+      <h1>할 일 목록</h1>
+      <input type="text" id="taskInput" placeholder="할 일을 추가하세요" />
+      <button onclick="addTask()">추가</button>
+      <ul id="taskList">
+        <!-- 여기에 할 일들이 나열됩니다 -->
+      </ul>
+    </div>
   </body>
 </html>

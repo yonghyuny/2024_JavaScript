@@ -1,0 +1,39 @@
+.addPage {
+  width: 90%;
+  max-width: 600px;
+  height: 600px;
+  background-color: blue;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.addPage__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.addPage__main {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.addPage__main > input {
+  width: 100%;
+  height: 70px;
+  background-color: blue;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.addPage__addBtn {
+  width: 100%;
+  background-color: skyblue;
+  padding: 20px;
+}

@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "KyoboHandwriting2023wsa";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2404-2@1.0/KyoboHandwriting2023wsa.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width: 100vw;
+  font-family: "KyoboHandwriting2023wsa";
+}
+.title {
+  padding: 30px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.header {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.today {
+  display: flex;
+  gap: 10px;
+}
+.date {
+  font-size: 30px;
+}
+
+.mon_year {
+  font-size: 15px;
+}
+
+.day {
+  font-size: 15px;
+}
+
+.main {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+}
+
+.add {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.addBtn {
+  background-color: blueviolet;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.complete {
+  color: #dbdbdb;
+  text-decoration: line-through;
+}
+
+.cancleBtn {
+  font-family: "KyoboHandwriting2023wsa";
+  font-size: 17px;
+}

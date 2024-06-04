@@ -1,15 +1,5 @@
-// 날씨, 지역 api
-// 배경화면 무작위 가져오기
-// date 비동기
-// 입력 및 클릭시 등록, 삭제, 취소선 이벤트처리
-// footer 인용 글귀 가져오기
-// 상단 리셋 기능
-
-// 이름 적고 할일 적기
-
 const today = new Date();
-const year = today.getFullYear();
-
+const fullYear = today.getFullYear();
 const date = today.getDate();
 
 const engMonth = {
@@ -27,6 +17,23 @@ const engMonth = {
   11: "Dec",
 };
 
-const todayInner = document.querySelector(".header__left-today");
+const engDay = {
+  1: "MONDAY",
+  2: "TUESDAY",
+  3: "WENDESDAY",
+  4: "THURSDAY",
+  5: "FRIDAY",
+  6: "SATURDAY",
+  7: "SUNDAY",
+};
 
-todayInner.innerText = `${engMonth[today.getMonth()]}. ${date}. ${year}`;
+export function makeToday() {
+  const year = document.querySelector(".year");
+  const month = document.querySelector(".month");
+  const date1 = document.querySelector(".date");
+  const day = document.querySelector(".day");
+  year.innerHTML = `${fullYear}`;
+  month.innerHTML = `${engMonth[today.getMonth()]}`;
+  day.innerHTML = `${engDay[today.getDay()]}`;
+  date1.innerHTML = `${date}`;
+}
