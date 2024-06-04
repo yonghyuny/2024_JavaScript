@@ -2,7 +2,7 @@ const today = new Date();
 const fullYear = today.getFullYear();
 const date = today.getDate();
 
-const engMonth = {
+export const engMonth = {
   0: "Jan",
   1: "Feb",
   2: "Mar",
@@ -17,7 +17,7 @@ const engMonth = {
   11: "Dec",
 };
 
-const engDay = {
+export const engDay = {
   1: "MONDAY",
   2: "TUESDAY",
   3: "WENDESDAY",
@@ -28,12 +28,10 @@ const engDay = {
 };
 
 export function makeToday() {
-  const year = document.querySelector(".year");
-  const month = document.querySelector(".month");
-  const date1 = document.querySelector(".date");
-  const day = document.querySelector(".day");
-  year.innerHTML = `${fullYear}`;
-  month.innerHTML = `${engMonth[today.getMonth()]}`;
-  day.innerHTML = `${engDay[today.getDay()]}`;
-  date1.innerHTML = `${date}`;
+  const year = (document.querySelector(".year").innerHTML = `${fullYear}`);
+  const month = (document.querySelector(".month").innerHTML = `${
+    engMonth[today.getMonth()]
+  }`);
+  const date1 = (document.querySelector(".date").innerHTML = `${date}`);
+  const day = (document.querySelector(".day").innerHTML = `${today.getDay()}`);
 }
