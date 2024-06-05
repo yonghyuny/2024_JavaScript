@@ -13,11 +13,13 @@ body {
   background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
 }
 .title {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
   padding: 30px;
-  position: relative;
+  text-align: center;
   font-size: 40px;
   font-weight: 900;
-  left: 580px;
 }
 
 .header {
@@ -36,19 +38,27 @@ body {
   border: none;
 }
 
+.reset {
+  background-color: inherit;
+  border: none;
+  font-family: "KyoboHandwriting2023wsa";
+}
+
 .prev:hover,
 .next:hover,
 .addBtn:hover,
 .cancleBtn:hover,
 .checkbox:hover,
 .todo:hover,
-.time:hover {
+.time:hover,
+.reset:hover {
   cursor: pointer;
 }
 
 .today {
   display: flex;
   gap: 10px;
+  width: 100px;
 }
 .date {
   font-size: 30px;
@@ -60,10 +70,12 @@ body {
 
 .day {
   font-size: 15px;
+  width: 100px;
 }
 
 .todayTime {
   font-size: 20px;
+  width: 100px;
 }
 
 .main {
@@ -96,8 +108,8 @@ body {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-
-  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .addBtn {
@@ -105,19 +117,17 @@ body {
   border-radius: 50%;
   padding: 20px;
   border: 1px solid inherit;
-  position: absolute;
-  top: 20px;
-  right: 240px;
 }
 
 .complete {
   color: #dbdbdb;
-  text-decoration: line-through;
 }
 
 .cancleBtn {
   font-family: "KyoboHandwriting2023wsa";
-  font-size: 17px;
+  font-size: 15px;
+  width: 50px;
+  height: 25px;
   background-color: inherit;
   border-radius: 5px;
 }

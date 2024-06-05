@@ -1,7 +1,7 @@
 const addBtn = document.querySelector(".addBtn");
 const lists = document.querySelector(".lists");
 
-export function functionAddBtn() {
+export const functionAddBtn = () => {
   addBtn.addEventListener("click", () => {
     const enterTodo = window.prompt("할일 입력");
     const enterTime = window.prompt("시간 입력") || new Date();
@@ -10,7 +10,6 @@ export function functionAddBtn() {
     listItem.classList.add("list");
 
     listItem.innerHTML = `
-    <input type="checkbox" class="checkbox"/>
     <div class="todo">${enterTodo}</div>
     <div class="time">${enterTime}</div>
     <button class="cancleBtn">취소</button>
@@ -19,10 +18,7 @@ export function functionAddBtn() {
     lists.appendChild(listItem);
 
     listItem.addEventListener("click", () => {
-      const todo = document.querySelector(".todo");
-      const time = document.querySelector(".time");
-      todo.classList.toggle("complete");
-      time.classList.toggle("complete");
+      listItem.classList.toggle("complete");
     });
 
     const cancleBtn = listItem.querySelector(".cancleBtn");
@@ -30,4 +26,4 @@ export function functionAddBtn() {
       listItem.remove();
     });
   });
-}
+};

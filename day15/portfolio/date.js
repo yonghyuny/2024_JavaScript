@@ -27,11 +27,13 @@ export const engDay = {
   7: "SUNDAY",
 };
 
-export function makeToday() {
+export const makeToday = () => {
   const year = (document.querySelector(".year").innerHTML = `${fullYear}`);
   const month = (document.querySelector(".month").innerHTML = `${
     engMonth[today.getMonth()]
   }`);
   const date1 = (document.querySelector(".date").innerHTML = `${date}`);
-  const day = (document.querySelector(".day").innerHTML = `${today.getDay()}`);
-}
+  const day = (document.querySelector(".day").innerHTML = `${
+    engDay[today.getDay()]
+  }`);
+};
